@@ -1,0 +1,28 @@
+.background-girl {
+    background-image: url('../images/girl.jpg');
+    background-size: cover;
+}
+
+.lighter {
+    background-color: rgba(255, 255, 255, 0.5);
+    --form-element-placeholder-color: brown;
+    font-weight: 600;
+    color: black;
+}
+
+label {
+    color: beige;
+    font-weight: 600;
+}
+
+blockquote {
+    color: deepskyblue;
+    font-weight: 600;
+    background-color: black;
+    opacity: 0.8;
+}
+
+cite {
+    color: white;
+    font-weight: 600;
+}

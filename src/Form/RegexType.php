@@ -1,0 +1,39 @@
+<?php
+
+namespace App\Form;
+
+use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+
+class RegexType extends AbstractType
+{
+    public function buildForm(FormBuilderInterface $builder, array $options): void
+    {
+        $builder
+            ->add('regex', TextareaType::class, [
+                'label' => 'Rajoute ici les éléments que tu souhaites pour que je puisse inventer une histoire :',
+                'attr' => [
+                    'placeholder' => 'Ex: un chat, un téléphone, une montre, un chateau, des paillettes...',
+                    'rows' => 10,
+                    ]
+                ])
+                ->add('submit', SubmitType::class, [
+                    'label' => 'Valider',
+                    'attr' => [
+                        'hx-post' => '/',
+                        'hx-target' => '#response',
+                    ]
+                ])
+        ;
+    }
+
+    public function configureOptions(OptionsResolver $resolver): void
+    {
+        $resolver->setDefaults([
+            // Configure your form options here
+        ]);
+    }
+}

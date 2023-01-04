@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <h1>🧞‍♂️ Raconte-moi ton HISTOIRE! 👩‍🎤 🧌</h1>
+    {{form_start(form)}}
+    {{form_row(form.regex, {
+        attr: {
+            'class': 'lighter'
+        }
+    }) }}
+    {{form_row(form.submit, {
+        label_html: true,
+        label: 'C\'est parti!!! <img style="width:28px;height:28px;" class="htmx-indicator" src="/loader.svg"/>'
+    }) }}
+    {{form_end(form)}}
+
+    <div id="response"></div>
+
+{% endblock %}
