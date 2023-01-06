@@ -17,7 +17,7 @@ class OpenAiService
 
         $complete = $open_ai->completion([
             'model' => 'text-davinci-003',
-            'prompt' => 'Raconte moi une histoire d\'horreur pour enfants avec les éléments suivants: ' . $story,
+            'prompt' => 'Raconte moi une longue histoire pour enfants avec des rebondissements incroyables et avec les éléments suivants de cette liste: ' . $story,
             'temperature' => 0,
             'max_tokens' => 3500,
             'frequency_penalty' => 0.5,
