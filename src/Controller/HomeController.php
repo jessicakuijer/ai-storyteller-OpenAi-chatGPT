@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Form\RegexType;
+use App\Form\StoryType;
 use App\Service\OpenAiService;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -16,7 +16,7 @@ class HomeController extends AbstractController
      */
     public function index(Request $request, OpenAiService $openAiService): Response
     {
-        $form = $this->createForm(RegexType::class);
+        $form = $this->createForm(StoryType::class);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             $data = $form->getData();

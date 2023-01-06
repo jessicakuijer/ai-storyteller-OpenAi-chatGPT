@@ -8,12 +8,12 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
-class RegexType extends AbstractType
+class StoryType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('regex', TextareaType::class, [
+            ->add('story', TextareaType::class, [
                 'label' => 'Rajoute ici les éléments que tu souhaites pour que je puisse inventer une histoire :',
                 'attr' => [
                     'placeholder' => 'Ex: un chat, un téléphone, une montre, un chateau, des paillettes...',
