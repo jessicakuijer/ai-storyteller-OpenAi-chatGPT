@@ -21,7 +21,7 @@ class HomeController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $data = $form->getData();
             //dd($data);
-            $json = $openAiService->getHistory($data['regex']);
+            $json = $openAiService->getHistory($data['story']);
             //dd($json);
             return $this->render('home/history.html.twig', [
                 'json' => $json ?? null,
