@@ -24,7 +24,7 @@ class StoryType extends AbstractType
                     'label' => 'Valider',
                     'attr' => [
                         'hx-post' => '/',
-                        'hx-target' => '#response',
+                        'hx-target' => '#response'
                     ]
                 ])
         ;

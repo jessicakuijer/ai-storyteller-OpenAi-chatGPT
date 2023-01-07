@@ -28,9 +28,9 @@ class OpenAiService
 
         if (isset($json['choices'][0]['text'])) {
             $json = $json['choices'][0]['text'];
-        } else {
-            $json = 'Une erreur est survenue. Je n\'ai pas pu vous aider et ne peux créer cette histoire pour l\'instant.';
+            return $json;
         }
+        $json = 'Une erreur est survenue. Je n\'ai pas pu vous aider et ne peux créer cette histoire pour l\'instant.';
         
         //dd($json);
 

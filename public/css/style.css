@@ -26,3 +26,9 @@ cite {
     color: white;
     font-weight: 600;
 }
+
+.link {
+    margin-left: 10px;
+    color: deepskyblue;
+    font-weight: 600;
+}
