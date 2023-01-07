@@ -1,5 +1,5 @@
 .background-girl {
-    background-image: url('../images/girl.jpg');
+    background-image: url('../images/sketches.jpeg');
     background-size: cover;
 }
 
@@ -11,8 +11,10 @@
 }
 
 label {
-    color: beige;
+    color: deepskyblue;
     font-weight: 600;
+    background-color: black;
+    opacity: 0.8;
 }
 
 blockquote {
@@ -29,6 +31,11 @@ cite {
 
 .link {
     margin-left: 10px;
-    color: deepskyblue;
+    color: hsl(205deg 20% 94%);
     font-weight: 600;
+    background-color: #388e3c;
+}
+
+.darkred {
+    color: darkred;
 }
