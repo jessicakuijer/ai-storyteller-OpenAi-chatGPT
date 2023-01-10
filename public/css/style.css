@@ -1,6 +1,8 @@
-.background-girl {
+.background {
     background-image: url('../images/sketches.jpeg');
     background-size: cover;
+    position: relative;
+    background-position: 50%;
 }
 
 .lighter {
@@ -10,19 +12,12 @@
     color: black;
 }
 
-label {
+/* blockquote {
     color: deepskyblue;
     font-weight: 600;
     background-color: black;
     opacity: 0.8;
-}
-
-blockquote {
-    color: deepskyblue;
-    font-weight: 600;
-    background-color: black;
-    opacity: 0.8;
-}
+} */
 
 cite {
     color: white;
@@ -34,8 +29,4 @@ cite {
     color: hsl(205deg 20% 94%);
     font-weight: 600;
     background-color: #388e3c;
-}
-
-.darkred {
-    color: darkred;
 }
