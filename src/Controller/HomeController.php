@@ -29,6 +29,7 @@ class HomeController extends AbstractController
             else {
                 $json = $openAiService->getHistory($data['story']);
             }
+            
             return $this->render('home/history.html.twig', [
                 'json' => $json ?? null,
             ]);
