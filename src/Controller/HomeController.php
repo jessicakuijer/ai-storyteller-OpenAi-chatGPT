@@ -20,9 +20,15 @@ class HomeController extends AbstractController
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             $data = $form->getData();
-            //dd($data);
             $json = $openAiService->getHistory($data['story']);
-            //dd($json);
+            //si case cochée, on récupère une histoire alternative
+            if ($data['alternativeStory']) {
+                $json = $openAiService->getAlternativeHistory($data['story'], $data['alternativeStory']);
+            }
+            //sinon, on récupère une histoire classique
+            else {
+                $json = $openAiService->getHistory($data['story']);
+            }
             return $this->render('home/history.html.twig', [
                 'json' => $json ?? null,
             ]);
