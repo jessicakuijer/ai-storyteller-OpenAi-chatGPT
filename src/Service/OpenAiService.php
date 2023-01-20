@@ -16,10 +16,12 @@ class OpenAiService
         $open_ai_key = $this->parameterBag->get('OPENAI_API_KEY');
         $open_ai = new OpenAi($open_ai_key);
 
-        if ($type === 'history') {
-            $prompt = 'Raconte moi une histoire pour enfants avec des rebondissements incroyables et avec les éléments suivants: ' . $story;
-        } else {
+        if ($type === 'alternative') {
             $prompt = 'Raconte moi une histoire pour enfants avec une leçon de vie à la fin et avec les éléments suivants: ' . $story;
+        } elseif ($type === 'scary') {
+            $prompt = 'Raconte moi une histoire très effrayante pour enfants avec les éléments suivants: ' . $story;
+        } else {
+            $prompt = 'Raconte moi une histoire pour enfants avec des rebondissements incroyables et avec les éléments suivants: ' . $story;
         }
 
         $complete = $open_ai->completion([

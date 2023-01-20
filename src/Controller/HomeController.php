@@ -20,13 +20,20 @@ class HomeController extends AbstractController
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             $data = $form->getData();
-            // gestion de l'histoire alternative ou classique
-            $type = $data['alternativeStory'] ? 'alternative' : 'history';
+            // Dans ce cas, la variable $type est initialisée à 'history' par défaut.
+            //Cela permet de gérer les trois types d'histoires.
+            $type = 'history';
+            if ($data['alternativeStory']) {
+                $type = 'alternative';
+            } else if ($data['scaryStory']) {
+                $type = 'scary';
+            }
             $json = $openAiService->getStory($data['story'], $type);
             return $this->render('home/history.html.twig', [
                 'json' => $json ?? null,
             ]);
         }
+
         return $this->render('home/index.html.twig', [
             'form' => $form->createView(),
         ]);

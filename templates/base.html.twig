@@ -12,10 +12,12 @@
         {% block stylesheets %}
         {{ encore_entry_link_tags('app') }}
         {% endblock %}
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </head>
     <body class="background">
         <main class="container my-20 px-6 mx-auto mb-40">
             {% block body %}{% endblock %}
         </main>
+    <script src="{{ asset('js/script.js') }}"></script>
     </body>
 </html>

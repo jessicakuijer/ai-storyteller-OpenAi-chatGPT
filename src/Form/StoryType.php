@@ -5,6 +5,7 @@ namespace App\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
@@ -21,9 +22,16 @@ class StoryType extends AbstractType
                     'rows' => 10,
                     ]
                 ])
-            ->add('alternativeStory', CheckboxType::class, [
-                'label'    => 'Histoire alternative ?',
-                'required' => false,
+                ->add('currentCheckbox', HiddenType::class, [
+                    'data' => '',
+                ])
+                ->add('alternativeStory', CheckboxType::class, [
+                    'label'    => 'Histoire avec une leçon de morale ? ',
+                    'required' => false,
+                ])
+                ->add('scaryStory', CheckboxType::class, [
+                    'label'    => 'Histoire effrayante ? ',
+                    'required' => false,
                 ])
             ->add('submit', SubmitType::class, [
                 'label' => 'Valider',
