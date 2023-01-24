@@ -28,6 +28,7 @@ cite {
 	outline: none;
     background-image: url('../images/microphone.png');
     background-size: cover;
+    float: right;
 }
 
 .notRec{

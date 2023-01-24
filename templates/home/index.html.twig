@@ -12,8 +12,6 @@
         })}}
     {{form_row(form.story, {
         choice_label: 'alternativeStory',
-        label_html: true,
-        label: 'Saisissez vos éléments ou parlez en cliquant sur le microphone :<button id="recButton" class="buttonrec"></button>',
         attr: {
             'class': 'lighter form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none flex flex-row'
         }
@@ -27,6 +25,7 @@
     }) }}
     {{form_end(form)}}
 
+    <div class="block p-8 rounded-lg shadow-lg bg-white max-w-2xl container mx-auto max-h-fit mb-5 mt-2">Si tu es sur PC ou MAC, utilises la reconnaissance vocale!<button id="recButton" class="buttonrec"></button></div>
     <div id="response"></div>
 
 {% endblock %}
