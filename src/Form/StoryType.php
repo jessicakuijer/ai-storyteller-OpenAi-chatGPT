@@ -16,7 +16,7 @@ class StoryType extends AbstractType
     {
         $builder
             ->add('story', TextareaType::class, [
-                'label' => 'Rajoute ici les éléments que tu souhaites pour que je puisse inventer une histoire : ',
+                'label' => 'Rajoute ici les éléments que tu souhaites afin que je puisse inventer une histoire :',
                 'attr' => [
                     'placeholder' => 'Ex: un chat, un téléphone, une montre, un chateau, des paillettes...',
                     'rows' => 10,
