@@ -14,18 +14,18 @@ $("input[type='checkbox']").change(function() {
   rec.continuous = true;
   rec.interimResults = true;
 
-  // Fonction jquery pour contrôler l'écoute
+  // Fonction jquery pour controler l'écoute
   
   $('#recButton').addClass("notRec");
   
   $('#recButton').click(function(){
       if($('#recButton').hasClass('notRec')){
           $('#recButton').removeClass("notRec");
-          $('#recButton').addClass("rec");
+          $('#recButton').addClass("Rec");
           listen();
         }
         else{
-            $('#recButton').removeClass("rec");
+            $('#recButton').removeClass("Rec");
             $('#recButton').addClass("notRec");
             stopListen();
 	}
