@@ -14,6 +14,7 @@ class OpenAiService
     public function getStory(string $story, string $type = 'history'): string
     {
         $open_ai_key = $this->parameterBag->get('OPENAI_API_KEY');
+        
         $open_ai = new OpenAi($open_ai_key);
 
         if ($type === 'alternative') {
