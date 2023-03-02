@@ -27,7 +27,6 @@ class HomeController extends AbstractController
             } else if ($data['scaryStory']) {
                 $type = 'scary';
             }
-            
             $json = $openAiService->getStory($data['story'], $type);
             return $this->render('home/history.html.twig', [
                 'json' => $json ?? null,
