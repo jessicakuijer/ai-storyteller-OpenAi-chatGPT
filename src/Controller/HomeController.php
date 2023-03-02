@@ -11,9 +11,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class HomeController extends AbstractController
 {
-    /**
-     * @Route("/", name="app_home")
-     */
+    
+    #[Route('/', name: 'app_home')]
     public function index(Request $request, OpenAiService $openAiService): Response
     {
         $form = $this->createForm(StoryType::class);
