@@ -25,6 +25,10 @@ class OpenAiService
         $httpClient = new Psr18Client();
         $openAiClient = Manager::build($httpClient, new Authentication($openAiKey));
 
+        // On ajoute un point à la fin de l'histoire si il n'y en a pas.
+        if (!preg_match('/[.!?]$/', $story)) {
+            $story .= '.';
+        }        
 
         $prompt = match ($type) {
             'alternative' => 'Raconte moi une histoire pour enfants avec une leçon de vie à la fin et avec les éléments suivants: ' . $story,
