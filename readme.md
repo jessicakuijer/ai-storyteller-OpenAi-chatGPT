@@ -1,13 +1,13 @@
 
 # ai-StoryTeller-ChatGPT
 
-Symfony webApp utilisant l'API d'OpenAi ChatGPT-3 pour générer des histoires pour enfants.
+Symfony 6.2 webApp utilisant l'API d'OpenAi ChatGPT-3.5-turbo pour générer des histoires pour enfants.
 
 ## API Reference
 
-#### Utilisation de l'API OpenAI SDK PHP
+#### Utilisation de l'API Tectalic OpenAI REST API Client
 
-  https://github.com/orhanerday/open-ai
+  https://github.com/tectalichq/public-openai-client-php
 
 ## Demo
 
