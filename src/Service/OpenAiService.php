@@ -31,14 +31,14 @@ class OpenAiService
         }        
 
         $prompt = match ($type) {
-            'alternative' => 'Raconte moi une histoire pour enfants avec une leçon de vie à la fin et avec les éléments suivants: ' . $story,
-            'scary' => 'Raconte moi une histoire très effrayante pour enfants avec les éléments suivants: ' . $story,
-            default => 'Raconte moi une histoire pour enfants avec des rebondissements incroyables et avec les éléments suivants: ' . $story,
+            'alternative' => 'Crée une très courte histoire de 3 paragraphes pour enfants qui intègre les éléments suivants et se termine par une leçon de vie importante : ' . $story,
+            'scary' => 'Imagine une très courte histoire de 3 paragraphes effrayante adaptée aux enfants qui inclut ces éléments : ' . $story,
+            default => 'Élabore une très courte histoire de 3 paragraphes captivante pour enfants qui incorpore les éléments suivants et présente des rebondissements surprenants : ' . $story,
         };
 
         $request = $openAiClient->chatCompletions()->create(
             new CreateRequest([
-            'model' => 'gpt-3.5-turbo',
+            'model' => 'gpt-4',
             'messages' => [
                 ['role' => 'system', 'content' => 'You are a helpful assistant.'],
                 ['role' => 'user', 'content' => $prompt],
