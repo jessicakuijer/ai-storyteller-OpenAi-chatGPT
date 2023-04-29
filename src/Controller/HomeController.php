@@ -21,6 +21,7 @@ class HomeController extends AbstractController
             $data = $form->getData();
             // Dans ce cas, la variable $type est initialisée à 'history' par défaut.
             //Cela permet de gérer les trois types d'histoires.
+            
             $type = 'history';
             if ($data['alternativeStory']) {
                 $type = 'alternative';
