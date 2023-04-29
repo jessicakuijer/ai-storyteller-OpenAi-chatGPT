@@ -28,8 +28,8 @@ class OpenAiService
         // On ajoute un point à la fin de l'histoire si il n'y en a pas.
         if (!preg_match('/[.!?]$/', $story)) {
             $story .= '.';
-        }        
-
+        }
+        // ICI on peut ajouter des éléments à l'histoire en fonction du type de l'histoire.
         $prompt = match ($type) {
             'alternative' => 'Crée une très courte histoire de 3 paragraphes pour enfants qui intègre les éléments suivants et se termine par une leçon de vie importante : ' . $story,
             'scary' => 'Imagine une très courte histoire de 3 paragraphes effrayante adaptée aux enfants qui inclut ces éléments : ' . $story,
