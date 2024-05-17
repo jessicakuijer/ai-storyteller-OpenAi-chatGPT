@@ -38,7 +38,7 @@ class OpenAiService
 
         $request = $openAiClient->chatCompletions()->create(
             new CreateRequest([
-            'model' => 'gpt-4-1106-preview',
+            'model' => 'gpt-4o',
             'messages' => [
                 ['role' => 'system', 'content' => 'You are a great storyteller for kids.'],
                 ['role' => 'user', 'content' => $prompt],
