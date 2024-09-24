@@ -9,9 +9,7 @@ Symfony 6.2 webApp utilisant l'API d'OpenAi et le modèle GPT-4o pour générer 
 
   https://github.com/tectalichq/public-openai-client-php
 
-## Demo
-
-http://ai-storyteller.herokuapp.com/
+## Description  
   
 Générateur d'une histoire classique pour enfants avec éléments au choix et options vers une histoire alternative par la suite.
 
